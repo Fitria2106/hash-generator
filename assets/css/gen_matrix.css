@@ -1,0 +1,146 @@
+/* =========================
+   GLOBAL
+========================= */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #00ff9c;
+    font-family: 'Courier New', monospace;
+}
+
+/* =========================
+   MATRIX CANVAS
+========================= */
+#matrix {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+.matrix-wrapper {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.matrix-card {
+    background: rgba(0,0,0,0.75);
+    border: 1px solid #00ff9c;
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(0,255,156,0.45);
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+}
+
+/* =========================
+   TITLE
+========================= */
+.matrix-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    animation: matrixGlow 2.5s infinite alternate;
+}
+
+@keyframes matrixGlow {
+    from {
+        text-shadow: 0 0 6px #00ff9c;
+    }
+    to {
+        text-shadow:
+            0 0 15px #00ff9c,
+            0 0 35px rgba(0,255,156,0.7);
+    }
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+.matrix-nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.matrix-nav a {
+    color: #00ff9c;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.matrix-nav a:hover {
+    background: #00ff9c;
+    color: black;
+    box-shadow: 0 0 20px rgba(0,255,156,0.9);
+}
+
+/* =========================
+   INFO BOX
+========================= */
+.matrix-info {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FORM
+========================= */
+.matrix-card input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #00ff9c;
+    color: #00ff9c;
+    border-radius: 6px;
+}
+
+.matrix-card input[type="text"]:focus {
+    outline: none;
+    background: rgba(0,0,0,0.85);
+    box-shadow: 0 0 12px rgba(0,255,156,0.6);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.matrix-card button {
+    margin-top: 15px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #00ff9c;
+    color: #00ff9c;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.matrix-card button:hover {
+    background: #00ff9c;
+    color: black;
+    box-shadow: 0 0 25px rgba(0,255,156,0.9);
+}
+
+/* =========================
+   STATUS PESAN
+========================= */
+.status-pesan {
+    margin-top: 15px;
+    padding: 10px;
+    border-left: 4px solid #00ff9c;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0,255,156,0.3);
+}
